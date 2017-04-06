@@ -25,6 +25,9 @@ function serviceCheck {
     ${SERVICE_HOME}/bin/traefik.toml.sh
     log "[ Storing ${SERVICE_NAME} configuration in ${KV_BACKEND}... ]"
     ${SERVICE_HOME}/bin/traefik storeconfig --configfile=${SERVICE_HOME}/etc/traefik.toml
+    if [ "X${KV_BACKEND}" == "Xconsul" ] ; then
+        curl -XDELETE "http://${KV_ADDRESS}/v1/kv/traefik/acme/storagefile?token=${CONSUL_HTTP_TOKEN}"
+    fi
     rm ${SERVICE_HOME}/etc/traefik.toml
 }
 
