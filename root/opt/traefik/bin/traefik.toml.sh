@@ -97,6 +97,9 @@ prefix = "traefik"
 domain = "${RANCHER_DEFAULT_DOMAIN}"
 Watch = true
 ExposedByDefault = ${RANCHER_EXPOSED_DEFAULT}
+Endpoint = "${RANCHER_ENDPOINT}"
+AccessKey = "${RANCHER_ACCESS_KEY}"
+SecretKey = "${RANCHER_SECRET_KEY}"
 
 ${TRAEFIK_ACME_CFG}
 EOF
