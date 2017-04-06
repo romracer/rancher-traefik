@@ -25,6 +25,7 @@ function serviceCheck {
     ${SERVICE_HOME}/bin/traefik.toml.sh
     log "[ Storing ${SERVICE_NAME} configuration in ${KV_BACKEND}... ]"
     ${SERVICE_HOME}/bin/traefik storeconfig --configfile=${SERVICE_HOME}/etc/traefik.toml
+    rm ${SERVICE_HOME}/etc/traefik.toml
 }
 
 function serviceStart {
