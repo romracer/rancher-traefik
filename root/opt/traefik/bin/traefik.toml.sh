@@ -96,7 +96,7 @@ prefix = "traefik"
 [rancher]
 domain = "${RANCHER_DEFAULT_DOMAIN}"
 Watch = true
-ExposedByDefault = "${RANCHER_EXPOSED_DEFAULT}"
+ExposedByDefault = ${RANCHER_EXPOSED_DEFAULT}
 
 ${TRAEFIK_ACME_CFG}
 EOF

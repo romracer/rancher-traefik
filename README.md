@@ -38,6 +38,7 @@ Traefic is installed with the default configuration and some parameters can be o
 - TRAEFIK_ACME_ONDEMAND="true"							# ACME ondemand parameter
 - TRAEFIK_ACME_ONHOSTRULE="true"						# ACME OnHostRule parameter
 - TRAEFIK_K8S_ENABLE="false"							# Enable/disable traefik K8S feature
+- TRAEFIK_ACME_DNSPROVIDER="provider"						# Use DNS for ACME instead of HTTPS
 
 ### Custom Configuration
 
