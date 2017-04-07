@@ -85,7 +85,7 @@ users = [\"${TRAEFIK_WEBUI_BASIC_AUTH}\"]
 "
 fi
 if [ "X${TRAEFIK_WEBUI_DIGEST_AUTH}" != "X" ]; then
-    TRAEFIK_WEBUI_AUTH=$TRAEFIK_WEBUI_AUTH"\
+    TRAEFIK_WEBUI_AUTH="\
 [web.auth.digest]
 users = [\"${TRAEFIK_WEBUI_DIGEST_AUTH}\"]
 "
