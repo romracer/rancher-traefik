@@ -28,6 +28,9 @@ function serviceCheck {
     if [ "X${KV_BACKEND}" == "Xconsul" ] ; then
         curl -XDELETE "http://${KV_ADDRESS}/v1/kv/traefik/acme/storagefile?token=${CONSUL_HTTP_TOKEN}"
     fi
+    if [ "X${KV_BACKEND}" == "Xetcd" ] ; then
+        curl -XDELETE "http://${KV_ADDRESS}/v2/keys/traefik/acme/storagefile"
+    fi
     rm ${SERVICE_HOME}/etc/traefik.toml
 }
 
