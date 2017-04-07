@@ -39,6 +39,8 @@ Traefic is installed with the default configuration and some parameters can be o
 - TRAEFIK_ACME_ONHOSTRULE="true"						# ACME OnHostRule parameter
 - TRAEFIK_K8S_ENABLE="false"							# Enable/disable traefik K8S feature
 - TRAEFIK_ACME_DNSPROVIDER="provider"						# Use DNS for ACME instead of HTTPS
+- TRAEFIK_WEBUI_BASIC_AUTH							# Enable basic auth for the webui (use htpasswd to generate a string)
+- TRAEFIK_WEBUI_DIGEST_AUTH							# Enable digest auth for the webui (use htdigest to generate a string)
 
 ### Custom Configuration
 
