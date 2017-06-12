@@ -13,6 +13,7 @@ docker build -t romracer/rancher-traefik:<version> .
 
 ## Versions
 
+- `1.3.0-1` [(Dockerfile)](https://github.com/romracer/rancher-traefik/blob/1.3.0-1/Dockerfile)
 - `1.2.3-1` [(Dockerfile)](https://github.com/romracer/rancher-traefik/blob/1.2.3-1/Dockerfile)
 - `1.2.1-1` [(Dockerfile)](https://github.com/romracer/rancher-traefik/blob/1.2.1-1/Dockerfile)
 
