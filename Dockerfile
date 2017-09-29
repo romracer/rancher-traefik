@@ -4,7 +4,7 @@ MAINTAINER romracer <romracer@gmail.com>
 # Set environment
 ENV SERVICE_NAME=traefik \
     SERVICE_HOME=/opt/traefik \
-    SERVICE_VERSION=v1.3.0 \
+    SERVICE_VERSION=v1.3.8 \
     SERVICE_UID=10001 \
     SERVICE_GID=10001 \
     SERVICE_USER=traefik \
