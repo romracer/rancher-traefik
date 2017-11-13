@@ -68,7 +68,7 @@ if [ "X${TRAEFIK_HTTPS_ENABLE}" == "Xtrue" ] || [ "X${TRAEFIK_HTTPS_ENABLE}" == 
 email = \"${TRAEFIK_ACME_EMAIL}\"
 storage = \"traefik/acme/account\"
 onDemand = ${TRAEFIK_ACME_ONDEMAND}
-OnHostRule = ${TRAEFIK_ACME_ONHOSTRULE}
+onHostRule = ${TRAEFIK_ACME_ONHOSTRULE}
 entryPoint = \"https\""
 
     if [ "X${TRAEFIK_ACME_DNSPROVIDER}" != "X" ]; then
@@ -112,11 +112,12 @@ prefix = "traefik"
 
 [rancher]
 domain = "${RANCHER_DEFAULT_DOMAIN}"
-Watch = true
-ExposedByDefault = ${RANCHER_EXPOSED_DEFAULT}
-Endpoint = "${RANCHER_ENDPOINT}"
-AccessKey = "${RANCHER_ACCESS_KEY}"
-SecretKey = "${RANCHER_SECRET_KEY}"
+watch = true
+exposedByDefault = ${RANCHER_EXPOSED_DEFAULT}
+enableServiceHealthFilter = ${RANCHER_FILTER_UNHEALTHY}
+
+[rancher.metadata]
+intervalPoll = false
 
 ${TRAEFIK_ACME_CFG}
 EOF
